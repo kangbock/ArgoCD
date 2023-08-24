@@ -4,4 +4,4 @@ images:
 - name: https://harbor.k-tech.cloud/kaniko/nginx
   newTag: 25
 resources:
-- ../../base
+- ./base
