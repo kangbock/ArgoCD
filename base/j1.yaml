@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: nodejs
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: nodejs
-  replicas: 1
+      app: nginx
   template:
     metadata:
       labels: # labels to select/identify the deployment
@@ -14,34 +14,20 @@ spec:
     spec:     # pod spec
       containers:
         - name: nodejs
-          image: harbor.k-tech.cloud/kaniko/nodejs:latest # docker image name
+          image: harbor.k-tech.cloud/kaniko/nodejs:1
           ports:
             - containerPort: 3000
+      imagePullSecrets:
+      - name: docker-config-secret
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs
+  name: nodejs-service
 spec:
   selector:
-    app: nodejs
+    app: nginx
   ports:
     - port: 80
       targetPort: 3000
-  type: LoadBalancer
-  ---
-  apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: nodejs-ingress
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /testpath
-        pathType: Prefix
-        backend:
-          service:
-            name: nodejs
-            port:
-              number: 3000
+  type: ClusterIP
