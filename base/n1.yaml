@@ -53,3 +53,10 @@ spec:
             name: nginx-service
             port:
               number: 80
+      - path: /*.js
+        pathType: Prefix
+        backend:
+          service:
+            name: nodejs-service
+            port:
+              number: 80
