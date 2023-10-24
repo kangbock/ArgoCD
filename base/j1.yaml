@@ -13,10 +13,10 @@ spec:
         app: nodejs
     spec:     # pod spec
       containers:
-        - name: nodejs
-          image: harbor.k-tech.cloud/kaniko/nodejs:1
-          ports:
-            - containerPort: 3000
+      - name: nodejs
+        image: harbor.k-tech.cloud/kaniko/nodejs:1
+        ports:
+          - containerPort: 3000
       imagePullSecrets:
       - name: docker-config-secret
 ---
