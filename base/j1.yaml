@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels: # labels to select/identify the deployment
-        app: nodejs
+        app: nginx
     spec:     # pod spec
       containers:
       - name: nodejs
