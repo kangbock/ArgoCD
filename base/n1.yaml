@@ -54,7 +54,7 @@ spec:
             name: nginx-service
             port:
               number: 80
-      - path: /.*\.(js|pdf)$
+      - path: /.*.(js|pdf)$
         pathType: Prefix
         backend:
           service:
