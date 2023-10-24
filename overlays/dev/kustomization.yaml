@@ -2,8 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
 - name: https://harbor.k-tech.cloud/kaniko/nginx
-  newTag:20
+  newTag:21
 - name: https://harbor.k-tech.cloud/kaniko/nodejs
-  newTag:20
+  newTag:21
 resources:
 - ../../base
