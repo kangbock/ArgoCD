@@ -16,7 +16,7 @@ spec:
       - name: nodejs
         image: harbor.k-tech.cloud/kaniko/nodejs:1
         ports:
-          - containerPort: 3000
+        - containerPort: 3000
       imagePullSecrets:
       - name: docker-config-secret
 ---
