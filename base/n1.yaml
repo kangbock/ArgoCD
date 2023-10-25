@@ -47,7 +47,7 @@ spec:
   - host: www.k-tech.cloud
     http:
       paths:
-      - path: /
+      - path: /.*\.(html|css|jpg|png)$
         pathType: Prefix
         backend:
           service:
