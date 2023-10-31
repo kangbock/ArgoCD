@@ -15,7 +15,7 @@ spec:
     spec:     # pod spec
       containers:
       - name: nodejs
-        image: harbor.k-tech.cloud/kaniko/nodejs:30
+        image: harbor.k-tech.cloud/kaniko/nodejs:31
         ports:
         - containerPort: 3000
       imagePullSecrets:
