@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: harbor.k-tech.cloud/kaniko/nginx:36
+        image: harbor.k-tech.cloud/kaniko/nginx:37
         ports:
         - containerPort: 80
       imagePullSecrets:
