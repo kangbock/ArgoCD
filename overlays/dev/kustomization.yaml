@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: https://harbor.k-tech.cloud/kaniko/nginx
   newTag:2
-- name: https://harbor.k-tech.cloud/kaniko/nodejs
-  newTag:2
+# - name: https://harbor.k-tech.cloud/kaniko/nodejs
+#   newTag:2
 resources:
 - ../../base
